@@ -1,0 +1,50 @@
+name: Prophecy_Training
+description: ''
+version: 0.0.1
+author: SRao@Prophecy.io
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/Prophecy_Training:
+    name: Prophecy_Training
+    description: ''
+    author: SRao@Prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2022-06-27 21:39:09'
+    datasets:
+      inputs:
+      - 1892/datasets/Farmers_Market
+      - 1892/datasets/IRS_data
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/Farmers_Market:
+    name: Farmers_Market
+    description: ''
+    author: SRao@Prophecy.io
+    createdAt: '2022-06-27 21:46:27'
+    physicalDatasets:
+      dev:
+        fabricId: 657
+        datasetType: File
+        description: ''
+        author: SRao@Prophecy.io
+        createdAt: '2022-06-27 21:46:27'
+  datasets/IRS_data:
+    name: IRS_data
+    description: ''
+    author: SRao@Prophecy.io
+    createdAt: '2022-06-27 21:48:53'
+    physicalDatasets:
+      dev:
+        fabricId: 657
+        datasetType: File
+        description: ''
+        author: SRao@Prophecy.io
+        createdAt: '2022-06-27 21:48:53'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+dependencies: '[]'

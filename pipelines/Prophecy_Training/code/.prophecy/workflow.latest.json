@@ -1,0 +1,187 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "657",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "dev" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    }
+  },
+  "connections" : [ {
+    "id" : "D0VS9I6LVmSoM2rqVlCgP",
+    "source" : "sSL4LnCs1iVnBmKl0vZCL$$MklPySivGwrpb0MX_uVBI",
+    "sourcePort" : "iAwBlPe5H5eKnRjfNLQgz$$5oB0vizj9lvwFNEgbQv3w",
+    "target" : "44XaTAXVmWexR6DY11YcH$$cyyiGB8r0eZsXUIhfudDY",
+    "targetPort" : "Td6o2U_nJGW5Fa6sth1XH$$n-ElhGWP2agF0Ukc2dxfL"
+  }, {
+    "id" : "KS47nTwGJnFR8VZMPT1cg",
+    "source" : "ZwqyDia6sHdCumzOC2rKM$$QXfZ-wbGrc9-uAvZ8WfGh",
+    "sourcePort" : "DMTC1FY6sEP8mzH8HrAm5$$inUKsG4yATV0oh1f8xH7G",
+    "target" : "hdrE7y-mHoWfHv5Y1qFwe$$nc5h-0PhXjyinrQRzbufy",
+    "targetPort" : "qRvlNSsVuLLKY1aYkMNbq$$BW3Xc6CS9RnKwEsbKVleb"
+  } ],
+  "processes" : {
+    "44XaTAXVmWexR6DY11YcH$$cyyiGB8r0eZsXUIhfudDY" : {
+      "id" : "44XaTAXVmWexR6DY11YcH$$cyyiGB8r0eZsXUIhfudDY",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 445,
+        "y" : 159,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Td6o2U_nJGW5Fa6sth1XH$$n-ElhGWP2agF0Ukc2dxfL",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VmGbzxPrEgeZeBku0qxy8$$xHPpCmuej8Fsckqit8HJ0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      }
+    },
+    "sSL4LnCs1iVnBmKl0vZCL$$MklPySivGwrpb0MX_uVBI" : {
+      "id" : "sSL4LnCs1iVnBmKl0vZCL$$MklPySivGwrpb0MX_uVBI",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Farmers_Market",
+        "slug" : "Farmers_Market",
+        "x" : 140,
+        "y" : 160,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "iAwBlPe5H5eKnRjfNLQgz$$5oB0vizj9lvwFNEgbQv3w",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "1892/datasets/Farmers_Market"
+      }
+    },
+    "hdrE7y-mHoWfHv5Y1qFwe$$nc5h-0PhXjyinrQRzbufy" : {
+      "id" : "hdrE7y-mHoWfHv5Y1qFwe$$nc5h-0PhXjyinrQRzbufy",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_1",
+        "slug" : "Deduplicate_1",
+        "x" : 449,
+        "y" : 347,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qRvlNSsVuLLKY1aYkMNbq$$BW3Xc6CS9RnKwEsbKVleb",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "3QTk38LyhGNcEuTYZ5wWH$$h7LNf8pT_q8v9avLvJAfX",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ {
+          "colName" : "zipcode"
+        } ],
+        "dedupType" : "any",
+        "columnsSelector" : [ "qRvlNSsVuLLKY1aYkMNbq$$BW3Xc6CS9RnKwEsbKVleb##zipcode" ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      }
+    },
+    "ZwqyDia6sHdCumzOC2rKM$$QXfZ-wbGrc9-uAvZ8WfGh" : {
+      "id" : "ZwqyDia6sHdCumzOC2rKM$$QXfZ-wbGrc9-uAvZ8WfGh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "IRS_data",
+        "slug" : "IRS_data",
+        "x" : 158,
+        "y" : 348,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DMTC1FY6sEP8mzH8HrAm5$$inUKsG4yATV0oh1f8xH7G",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "1892/datasets/IRS_data"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

@@ -1,2 +1,1 @@
-# Prophecy_Training
-Training on Apache 
+# Prophecy_Training Repository
